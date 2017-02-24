@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Thoth</title>
+  <script type="text/javascript" src="http://muchnothing.com/static/elm.js"></script>
+
+  <link href='http://fonts.googleapis.com/css?family=Germania+One' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://muchnothing.com/static/style.css">
+</head>
+
+<body id = "body">
+    <nav id = "header">
+        <a class="nav-link" href ="/">Nothing</a>
+        <a class="nav-link" href ="/thoth">Thoth</a>
+    </nav>
+    <div id = "content">
+    <div>
+        <img src = "http://muchnothing.com/static/thoth.png" alt = "book monkey">
+        <h3>What is this?</h3>
+        <p>
+        I hate reading things on browsers. So I made something to automatically download pages, grab their content, and put it in an epub. But then I wanted to use it on phones, and dealing with the horrors of mobile development was more frightning than web development, so here it is, as a webapp.
+        </p>
+        
+        <p>
+        You can find the original here: <a href = "https://github.com/flyingjam/thoth">Github</a>
+        </p>
+        
+        <p>
+        The backend is written in F# with Suave.io, running on mono. Front-end is written in Elm.
+        </p>
+        <h3>Usage</h3> 
+        <p>
+            The title is also the filename. Author isn't neccesary, but it'll be missing in the epub metadata. 
+            To add a new page, type the url and press enter. It will appear below the line. You may edit them afterwards.
+        </p>
+        <p>
+        The order of the chapters in the epub will be the same as the order of the urls. 
+        </p>
+    </div>
+    <div id="elm">
+    
+    </div>
+    <p>
+        If you find bugs or complaints, send them to tehflyingjam@gmail.com. I probably won't notice it for several days or respond, but it's there.
+    </p>
+    </div>
+</body>
+
+<script type="text/javascript">
+    var elmDiv = document.getElementById('elm');
+    Elm.embed(Elm.Main, elmDiv);
+    //var app = Elm.fullscreen(Elm.Main);
+</script>
+
+</html>
